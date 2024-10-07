@@ -1,0 +1,154 @@
+/* Mengimpor font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Menambahkan font Montserrat dan General Sans */
+@font-face {
+    font-family: 'General Sans';
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+/* Transisi untuk layout */
+.layout-enter-active, .layout-leave-active {
+  transition: opacity 0.3s;
+}
+.layout-enter, .layout-leave-to /* .layout-leave-active di versi sebelumnya */ {
+  opacity: 0;
+}
+
+/* Transisi untuk halaman */
+.page-enter-active, .page-leave-active {
+    transition: opacity 0.5s ease; /* Durasi dan gaya transisi */
+  }
+  .page-enter, .page-leave-to /* .page-leave-active di versi sebelumnya */ {
+    opacity: 0; /* Halaman akan memudar masuk dan keluar */
+  }
+  
+
+/* Pengaturan font untuk seluruh halaman */
+html, body {
+    font-family: 'Fira Sans', 'General Sans', sans-serif !important;
+    scroll-behavior: smooth;
+    background-color: #fff; /* Gunakan 'background-color' alih-alih 'bg' */
+}
+
+
+.ql-toolbar.ql-snow {
+    border-radius: 6px 6px 0 0;
+}
+
+.quill-content p:has(img) {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.ql-editor {
+    font-family: 'Fira Sans', 'General Sans', sans-serif !important;
+}
+
+.ql-container {
+    border-radius: 0 0 6px 6px;
+}
+
+.quill-content p:has(br) {
+    font-size: 90px !important;
+    line-height: 16px;
+}
+
+.quill-content a {
+    font-weight: 500;
+}
+
+.ql-editor > ol {
+    font-size: 14px;
+}
+
+ol {
+    margin: 1.5rem 2rem;
+    list-style-type: decimal;
+    font-size: 16px;
+}
+
+a {
+    color: #0088CC;
+}
+
+p span, p, td, ol, li {
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.8rem;
+}
+
+td {
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+/* Tombol */
+.v-btn__content span {
+    font-family: 'Fira Sans', 'General Sans', sans-serif;
+}
+
+.v-btn--variant-elevated {
+    box-shadow: none !important;
+}
+
+.v-btn {
+    border-radius: 6px !important;
+}
+
+/* Efek transisi */
+.scale-enter-active,
+.scale-leave-active {
+    transition: all 0.3s ease;
+}
+
+.scale-enter-from,
+.scale-leave-to {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+p img {
+    margin-bottom: 16px;
+    border-radius: 10px;
+}
+
+/* Penyesuaian untuk layar kecil */
+@media screen and (max-width: 600px) {
+    p span, p, td, ol, li {
+        word-wrap: break-word;
+        font-size: 14px;
+        line-height: 1.8rem;
+    }
+}
